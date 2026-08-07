@@ -1,0 +1,17 @@
+version: "1.0"
+capstone_id: "flyrank-capstone-metering-billing"
+title: "LLM Usage Metering & Billing Service"
+base_url: "http://localhost:8000"
+
+commands:
+  run: "python main.py"
+  seed: "python seed_demo_data.py"
+  test: "pytest test_suite.py -v"
+
+endpoints:
+  health: "/health"
+  meter_usage: "/api/v1/meter"
+  billable_generate: "/api/v1/generate"
+  usage_rollup: "/api/v1/usage"
+  stripe_webhook: "/api/v1/webhooks/stripe"
+  checkout_session: "/api/v1/checkout/session"
